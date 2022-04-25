@@ -21,7 +21,7 @@ tbl_campaign
 
  
  
-tbl_ad                                   
+tbl_ad
    Column    |         Type          | Collation | Nullable |                Default|
 -------------|-----------------------|-----------|----------|---------------------------------------|
  ad id       | integer - Primary Key |           | not null | Auto Increment(Serial)|
@@ -34,6 +34,7 @@ tbl_keywords
 -------------+-----------------------+-----------+----------+---------|
  campaign_id | integer               |           | not null | |
  keyword     | character varying(45) |           | not null | |
+ 
  
 Indexes: `"tbl_keywords_pkey" PRIMARY KEY, btree (campaign_id, keyword)`
     
