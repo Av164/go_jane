@@ -30,8 +30,10 @@ tbl_ad
 
 
 tbl_keywords
+
+
    Column    |         Type          | Collation | Nullable | Default |
--------------+-----------------------+-----------+----------+---------|
+-------------|-----------------------|-----------|----------|---------|
  campaign_id | integer               |           | not null | |
  keyword     | character varying(45) |           | not null | |
  
