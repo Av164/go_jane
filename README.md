@@ -28,6 +28,7 @@ tbl_ad
  url_id      | character varying(45) |           |          | |
  campaign_id | integer               |           |          | |
 
+
 tbl_keywords
    Column    |         Type          | Collation | Nullable | Default |
 -------------+-----------------------+-----------+----------+---------|
