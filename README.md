@@ -33,6 +33,7 @@ tbl_keywords
 -------------+-----------------------+-----------+----------+---------|
  campaign_id | integer               |           | not null | |
  keyword     | character varying(45) |           | not null | |
+ 
 Indexes: `"tbl_keywords_pkey" PRIMARY KEY, btree (campaign_id, keyword)`
     
     
@@ -70,7 +71,7 @@ This endpoints checks for valid campaigns i.e. ones that are active and impressi
 -------|--------|------------- |
 10 | A10C43 | 43 |
 
-The select campaign ID	and the URL for the ad is returnedin the response.
+The select campaign ID	and the URL for the ad is returned in the response.
 
 `{"campaign_id":43, "impression_url":"http://localhost:8080/A10C43"}` 
 `
@@ -81,7 +82,7 @@ e.g.
 
 `http://localhost:8080/A10C43` will return `{}` with status code 200
 
-`http://localhost:8080/adcsed` will return {} 400
+`http://localhost:8080/adcsed` will return `{}` 400
 
 ### GET /campaign/[campaign-id]
 This returns the number of times an ad was impressed for that campaign i.e. the value in `tbl_campaign.impressed`. If the campaign does not exist it returns 400.
