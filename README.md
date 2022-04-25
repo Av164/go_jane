@@ -44,7 +44,7 @@ This creates a new campaign by adding an entry to tbl_campaign e.g:
 
  campaign id |   start campaign    |    end campaign     | max impressions | cpm | impressions |
 -------------|---------------------|---------------------|-----------------|-----|-------------
-           2 | 2022-04-23 19:25:02 | 2022-04-23 21:36:39 |               1 |  20 |           0|
+2 | 2022-04-23 19:25:02 | 2022-04-23 21:36:39 |               1 |  20 |           0|
 
 The column impressions is set to 0 by default
 
@@ -52,8 +52,8 @@ Along with multiple rows are added to tbl_keywords with where campaign_id is the
 
  campaign_id | keyword |
 -------------|---------|
-          2 | android|
-          2 | iOS|
+2 | android |
+2 | iOS |
           
           
 Both these queries are wrapped in a transaction.
@@ -77,11 +77,17 @@ The select campaign ID	and the URL for the ad is returnedin the response.
 ### 3. GET [impression-url] 
 This is used to call an add generated in  POST /addecision. When a URL with an existing add is called, it incrrements the `tbl_campaign.impressed` column. If the ad does not exist it returns a status 400.
 
-e.g. http://localhost:8080/A10C43 will return {} 200
+e.g. 
+
+http://localhost:8080/A10C43 will return {} 200
+
 http://localhost:8080/adcsed will return {} 400
 
 ### GET /campaign/[campaign-id]
 This returns the number of times an ad was impressed for that campaign i.e. the value in `tbl_campaign.impressed`. If the campaign does not exist it returns 400.
 
-e.g. http://localhost:8080/campaign/43 will return '1' 
-http://localhost:8080/campaign/adcsed will return 400
+e.g. 
+
+`http://localhost:8080/campaign/43` will return `'1'` 
+
+`http://localhost:8080/campaign/adcsed` will return 400
