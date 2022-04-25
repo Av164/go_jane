@@ -68,7 +68,7 @@ This endpoints checks for valid campaigns i.e. ones that are active and impressi
 
  ad id | url id | campaign_id |
 -------|--------|------------- |
-    10 | A10C43 |          43|
+10 | A10C43 | 43 |
 
 The select campaign ID	and the URL for the ad is returnedin the response.
 
