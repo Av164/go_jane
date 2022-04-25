@@ -79,9 +79,9 @@ This is used to call an add generated in  POST /addecision. When a URL with an e
 
 e.g. 
 
-http://localhost:8080/A10C43 will return {} 200
+`http://localhost:8080/A10C43` will return `{}` with status code 200
 
-http://localhost:8080/adcsed will return {} 400
+`http://localhost:8080/adcsed` will return {} 400
 
 ### GET /campaign/[campaign-id]
 This returns the number of times an ad was impressed for that campaign i.e. the value in `tbl_campaign.impressed`. If the campaign does not exist it returns 400.
@@ -90,4 +90,4 @@ e.g.
 
 `http://localhost:8080/campaign/43` will return `'1'` 
 
-`http://localhost:8080/campaign/adcsed` will return 400
+`http://localhost:8080/campaign/adcsed` will return status code 400
